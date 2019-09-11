@@ -1,0 +1,32 @@
+
+                  
+<h1>{{ title }}</h1>   
+
+<button (click)="getTransaction()">Generate Cashflows</button>
+<table id="transactionTable">
+    <tr cellspacing="2" cellpadding="2">
+        <td>Transaction Id</td>
+        <td>User Id</td>
+        <td>Account Number</td>
+        <td>Counter Party Account Number</td>
+        <td>Amount</td>
+        <td>Currency</td>
+        <td>Date</td>
+        <td>                 </td>
+    </tr>
+ 
+<tr *ngFor="let ele of transactions.Array">
+        <td ng-model="id">{{ele.transaction_id}}</td>
+        <td>{{ele.user_id}}</td>
+        <td>{{ele.account_no}}</td>
+        <td>{{ele.counterparty_account_no}}</td>
+        <td>{{ele.amount}}</td>
+        <td>{{ele.currency}}</td>
+        <td>{{ele.date}}</td>
+        <td><button (click)="deleteTransaction(ele)">Delete transaction</button></td>
+    </tr>
+
+  
+    
+  
+</table>

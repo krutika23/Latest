@@ -1,0 +1,19 @@
+<br><br>
+
+<div id = "centre">
+    EUR Account
+</div>
+
+<div id = "marg">
+    <div class="p-grid">
+        <div class="p-col">Account Number: {{ account_number }}</div>
+        <div class="p-col">Type: {{ type }}</div>
+        <div class="p-col">Balance: {{ balance }}</div>
+    </div>
+</div>
+
+<br>
+
+<p-button label="Add Transaction" (onClick)="openDialog($event)" ></p-button>
+<br>
+<p-button label="View Transaction" (onClick)="viewHandleClick($event)"></p-button>

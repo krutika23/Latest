@@ -1,0 +1,72 @@
+#container{
+
+    position: fixed;
+    width: 300px;
+    height: 500px;
+    top: 40%;
+    left:10%;
+    
+    
+
+}
+
+#container1{
+
+    position: fixed;
+    width: 300px;
+    height: 500px;
+    top: 40%;
+    left: 35%;
+    
+    
+    
+}
+#container2{
+
+    position: fixed;
+    width: 300px;
+    height: 500px;
+    top: 40%;
+    left: 60%;
+    
+    
+
+
+}
+#container3{
+
+    position: fixed;
+    width: 800px;
+    height: 120px;
+    top: 10%;
+    left: 10%;
+    background-color: #3295ce;
+}
+
+button[type=submit] {
+
+    position: fixed;
+    top:10%;
+    left:75%;
+    width: 150px;
+    height: 120px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+   
+
+    background-color: #3295ce; /*IE fallback*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#38b3ec));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #3cb3eb 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #37afe7 100%);
+
+    border-radius: 30px;
+    border: 1px solid #4daee6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+    cursor: pointer;
+    }
+    
+    .usd .ui-card{
+        background-color: #3295ce;
+    }
+    

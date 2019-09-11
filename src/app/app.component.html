@@ -1,0 +1,41 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="appDrawer.toggle()">menu</mat-icon>
+    </button>
+
+   
+    <h1>Welcome {{ username }}</h1>
+    <span class = "filler"></span>
+    <span> {{ now | date:'EEEE, MMMM d, y, HH:mm:ss a'}} </span>
+    <span class = "filler"></span>
+    <span> <button mat-icon-button (click)="handleClick($event)">Logout</button> </span>
+  
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #appDrawer mode="over" opened="false">
+    <mat-nav-list>
+        <a href="#user"><img class="circle" src="https://www.stickpng.com/assets/images/5847e7c1cef1014c0b5e4813.png" height="100" width="60" class="center"></a>
+      <!-- <a mat-list-item [routerLink] = "'/dashboard'" (click)="sidenav.close()"> Dashboard </a>
+      <a mat-list-item [routerLink] = "'/gbp-account'" (click)="sidenav.close()"> GBP Account </a>
+      <a mat-list-item [routerLink] = "'/usd-account'" (click)="sidenav.close()"> USD Account </a>
+      <a mat-list-item [routerLink] = "'/eur-account'" (click)="sidenav.close()"> EUR Account </a>
+      <a mat-list-item [routerLink] = "'/view-transaction'" (click)="sidenav.close()"> View Transactions </a>  -->
+      <!-- <a mat-list-item [routerLink] = "'/net-balance'" (click)="sidenav.close()"> Net Balance </a> -->
+      <!-- <a mat-list-item [routerLink] = "'/analysis'" (click)="sidenav.close()"> Account Analysis </a> -->
+
+      <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- <mat-sidenav-content>
+    <div style="height: 88vh;"> -->
+      <router-outlet></router-outlet>
+    <!-- </div> 
+  </mat-sidenav-content>  -->
+  <div fxFlex></div>
+  <!-- <span class="version-info">Current build: {{version.full ? version.full : version}}</span> -->
+
+</mat-sidenav-container>

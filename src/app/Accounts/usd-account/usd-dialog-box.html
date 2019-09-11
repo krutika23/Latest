@@ -1,0 +1,16 @@
+﻿<h1 mat-dialog-title>{{description}}</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <input matInput placeholder="Recepient Name" [(ngModel)]="data.receipient_name" required>
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input matInput placeholder="Recepient Account Number" [(ngModel)]="data.account_number" required>
+    </mat-form-field> <br>
+    <mat-form-field>
+        <input matInput placeholder="Amount" [(ngModel)]="data.amount" required>
+    </mat-form-field>
+</div>
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="data" tabindex="2" (onClick)="addTransaction()">Add</button>
+    <button mat-button mat-dialog-close tabindex="-1">Close</button>
+</mat-dialog-actions>
